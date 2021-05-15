@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trasformazione di Lorentz</title>
+<!-- Allinea tutto al centro e definisci i margini da rispettare -->
+<style>
+body{
+	margin: 0px;
+	text-align: center;
+}
+
+.separator{
+	margin: 0px auto 50px auto;
+	width: 600px;
+}
+
+#canvas{
+	margin-bottom: 25px;
+}
+
+input{
+	width: 600px;
+	display: block;
+	margin-bottom: 25px;
+}
+
+button{
+	width: 20%;
+	padding: 5px;
+	margin: 5px;
+}
+</style>
+</head>
+<body>
+	<!-- Ttilo e descrizione -->
+	<div class="separator">
+		<h1>Trasformazione di Lorentz</h1>
+		<h3>2016 Theo Saporiti<br>LAM in Fisica 2016-2017, Liceo di Lugano 2</h3>
+	</div>
+
+	<div class="separator">
+		<!-- Elemento canvas dove si andrà a disegnare -->
+		<canvas id="canvas" width="600" height="600"></canvas>
+		
+		<!-- Slider della variabile beta -->
+		<input id="beta" type="range" min="-1" max="1" step="0.001" value="0">
+
+		<!-- Pulsanti messi a disposizione dell'utente -->
+		<button onclick="user.random();">Aggiungi eventi</button>
+		<button onclick="user.empty();">Elimina eventi</button>
+		<button onclick="user.refresh();">Lascia traccia</button>
+		<button onclick="user.transformation();">Trasformazione</button>
+	</div>
+
+	<!-- Chiama il codice sorgente in JavaScript -->
+	<script src="code.js"></script>
+</body>
+</html>
