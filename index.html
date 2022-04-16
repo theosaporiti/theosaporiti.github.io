@@ -11,24 +11,10 @@
 	body{
 		overflow-y: scroll;
 	}
-	.link{
-		margin: 0px 3.8% 0px 0px;
-		cursor: pointer;
-		font-weight: bold;
-		white-space: nowrap;
-	}
-	.link:hover{
-		text-decoration: underline
-	}
 	#page{
 		width: 100%;
 		max-width: 800px;
 		margin: 0px auto;
-	}
-	#legal_link{
-		text-decoration: underline;
-		cursor: pointer;
-		color: blue;
 	}
 	</style>
 </head>
@@ -36,9 +22,7 @@
 	<div id="page">
 		<h1>Theo Saporiti</h1>
 		<hr>
-		<span class="link" href="about_me">About me</span><span class="link" href="drives">Drives</span><span class="link" href="extra">Extra</span>
-		<hr>
-
+		
 		<div id="about_me" class="content">
 			<h2>Hi!</h2>
 			<ul>
@@ -58,6 +42,7 @@
 				<p>In this Maturaarbeit/travail de maturité/lavoro di maturità, the theory of special relativity is presented and discussed. The intended target audience is of high school students.</p>
 				<ul>
 					<li><p><a href="pdfs/LAM_theo.pdf" target="_blank">Relatività ristretta e sue applicazioni allo SwissFEL</a> [PDF, italian]</p></li>
+					<li><p><a href="extras/lorentz" target="_blank">Interactive 1D Lorentz boost</a> [HTML5, italian]</p></li>
 				</ul>
 				<p>These notes were written at <b>Liceo Cantonale di Lugano 2</b> in the last high school year.</p>
 			</ul>
@@ -68,54 +53,9 @@
 			</ul>
 		</div>
 
-		<div id="drives" class="content">			
-			<h2>Bachelor archives</h2>
-			<ul>
-				<h3>EPFL drive</h3>
-				<p>Reports of the 2018-2019 Travaux Pratiques and Physique Numérique I-II courses.</p>
-				<ul>
-					<li><p><a href="https://drive.google.com/drive/folders/1uJRDbRinT9RDOGi19So0mhoBqu3tqiZu?usp=sharing" target="_blank">EPFL drive</a> [PDFs, french]</p></li>
-				</ul>
-
-				<h3>Imperial drive</h3>
-				<p>Reports, solutions and exam submissions of my 2019-2020 exchange year.</p>
-				<ul>
-					<li><p><a href="https://drive.google.com/drive/folders/1KdOn_Bfbl4XFM0IehcJEn2sWym5qkRoc?usp=sharing" target="_blank">Imperial drive</a> [PDFs, english]</p></li>
-				</ul>
-			</ul>
-		</div>
-
-
-		<div id="extra" class="content">
-			<h2>Additional content</h2>
-			<ul>
-				<h3>Lorentz boost</h3>
-				<p>Interactive visualization of a 1D Lorentz boost created for high school students.</p>
-				<ul>
-					<li><p><a href="extras/lorentz">Lorentz boost</a> [HTML5, italian]</p></li>
-				</ul>
-			</ul>
-		</div>
-
-
 		<br>
 		<hr>
 		<p style="text-align: right;"><b>© Theo Saporiti</b></p>
 	</div>
 </body>
-<script>
-	// Notice i = 1
-	for(var i = 1; i < document.getElementsByClassName("content").length; i++){
-		document.getElementsByClassName("content")[i].style.display = "none";
-	}
-
-	for(var i = 0; i < document.getElementsByClassName("link").length; i++){
-		document.getElementsByClassName("link")[i].addEventListener("click", function(){
-			for(var j = 0; j < document.getElementsByClassName("content").length; j++){
-				document.getElementsByClassName("content")[j].style.display = "none";
-			}
-			document.getElementById(this.getAttribute("href")).style.display = "block";
-		});
-	}
-</script>
 </html>
