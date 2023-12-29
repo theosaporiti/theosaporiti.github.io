@@ -1,83 +1,64 @@
 <!doctype html>
 <html lang="en">
+<!-- "E vanno gli uomini a contemplare le cime dei monti, i vasti flutti del mare, le ampie correnti dei fiumi, l'immensità dell'oceano, il corso degli astri e trascurano se stessi." -->
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width">
 
-	<title>Theo Saporiti</title>
-	<!-- "E vanno gli uomini a contemplare le cime dei monti, i vasti flutti del mare, le ampie correnti dei fiumi, l'immensità dell'oceano, il corso degli astri e trascurano se stessi." -->
+	<link rel="stylesheet" href="style.css">
 
-	<style>
-	body{
-		overflow-y: scroll;
-	}
-	h2{
-		margin: 30px auto 0px auto;
-	}
-	#page{
-		width: 100%;
-		max-width: 800px;
-		margin: 0px auto;
-	}
-	#footer{
-		text-align: right;
-	}
-	</style>
+	<title>Theo Saporiti</title>
 </head>
 <body>
-	<div id="page">
-		<h1>Theo Saporiti</h1>
-
+<div id="container">
+	<h1>Theo Saporiti</h1>
+	
+	<div class="page">
 		<h2>Hi!</h2>
-		<hr>
 		<ul>
-			<p>I'm a theoretical HEP MSc student currently at ETH Zürich.</p>
+			<p>I'm a PhD candidate in Quantum Computing at CEA, Université Paris-Saclay, interested in error-mitigated quantum simulations of high energy physics and condensed matter systems.</p>
 		</ul>
-
-		<h2>Past works</h2>
-		<hr>
-		<ul>
-			<h3><i>Master Thesis</i><br>Computer-assisted two-loops renormalization of six-dimensional scalar effective field theories</h3>
-			<p>In this Master thesis, computer algebra programs in FORM and Wolfram Language are written to automatically calculate and solve the renormalization group equations of various scalar effective field theories up to 2 loops.</p>
-			<ul>
-				<li><p><a href="pdfs/Master_Thesis_Theo.pdf" target="_blank">Computer-assisted two-loops renormalization of six-dimensional scalar effective field theories</a> [PDF, english]</p></li>
-			</ul>
-			<p>The thesis was carried out at <b>ETH Zürich</b> in the Theoretical Particle Physics Group.</p>
-			<hr>
-
-			<h3><i>Master seminar</i><br>Path integrals in quantum mechanics, Semiclassical approximation</h3>
-			<p>In these notes, a complete derivation, a discussion of their properties and a few applications are shown for the path integral formalism and the WKB approximation in quantum mechanics.</p>
-			<ul>
-				<li><p><a href="pdfs/Proseminar_Report_Saporiti.pdf" target="_blank">Path integrals in quantum mechanics, Semiclassical approximation</a> [PDF, english]</p></li>
-				<li><p><a href="pdfs/Proseminar_Presentation.pdf" target="_blank">Lecture slides</a> [PDF, english]</p></li>
-			</ul>
-			<p>The proseminar was held at <b>ETH Zürich</b> during my MSc studies.</p>
-			<hr>
-
-			<h3><i>Bachelor Thesis</i><br>Path Integral Monte Carlo and Hydrogen bond</h3>
-			<p>In this final year Bachelor project, Feynman's path integral formulation of quantum mechanics is applied to develop a C++ Monte Carlo numerical simulation of 1D quantum systems, notably the hydrogen bond between water molecules.</p>
-			<ul>
-				<li><p><a href="pdfs/ProjectReport_Frost_Saporiti.pdf" target="_blank">Path Integral Monte Carlo and Hydrogen bond</a> [PDF, english]</p></li>
-			</ul>
-			<p>The project was carried out at <b>Imperial College London</b> during my BSc exchange year outside of EPFL.</p>
-			<hr>
-
-			<h3><i>Swiss Matura</i><br>Relatività ristretta e sue applicazioni allo SwissFEL</h3>
-			<p>In this Maturaarbeit/travail de maturité/lavoro di maturità, the theory of special relativity is presented and discussed. The intended target audience is of high school students.</p>
-			<ul>
-				<li><p><a href="pdfs/LAM_theo.pdf" target="_blank">Relatività ristretta e sue applicazioni allo SwissFEL</a> [PDF, italian]</p></li>
-				<li><p><a href="extras/lorentz" target="_blank">Interactive 1D Lorentz boost</a> [HTML5, italian]</p></li>
-			</ul>
-			<p>These notes were written at <b>Liceo Cantonale di Lugano 2</b> in the last high school year.</p>
-		</ul>
-
-		<h2>Contact</h2>
-		<hr>
-		<ul>
-			<p>You can either send me an <a href="mailto:theo@saporiti.ch">email</a> or you can find me on <a href="https://www.linkedin.com/in/theosaporiti/">LinkedIn</a>.</p>
-		</ul>
-
-		<p id="footer"><b>© Theo Saporiti</b></p>
 	</div>
+
+	<div class="page nolink">
+		<h2>Past works</h2>
+		<a href="pdfs/Master_Thesis_Theo.pdf" target="_blank"><div class="box">
+			<h3><i>Computer-assisted two-loops renormalization of six-dimensional scalar effective field theories</i></h3>
+			<p>In this Master thesis, computer algebra programs in FORM and Wolfram Language are written to automatically calculate and solve the renormalization group equations of various scalar effective field theories up to 2 loops.</p>
+			<p><b>ETH Zürich</b>, April 2023</p>
+		</div></a>
+
+		<a href="pdfs/ProjectReport_Frost_Saporiti.pdf" target="_blank"><div class="box">
+			<h3><i>Path Integral Monte Carlo and Hydrogen bond</i></h3>
+			<p>In this final year Bachelor project, Feynman's path integral formulation of quantum mechanics is applied to develop a C++ Monte Carlo numerical simulation of 1D quantum systems, notably the hydrogen bond between water molecules.</p>
+			<p><b>Imperial College London</b>, May 2020</p>
+		</div></a>
+	</div>
+
+	<div class="page nolink">
+		<h2>Extra</h2>
+
+		<a href="pdfs/Proseminar_Report_Saporiti.pdf" target="_blank"><div class="box">
+			<h4>Introduction to Path Integrals and the WKB method</h4>
+		</div></a>
+
+		<a href="pdfs/LAM_theo.pdf" target="_blank"><div class="box">
+			<h4>Introduction to Special Relativity (in italian)</h4>
+		</div></a>
+
+		<a href="bicycle" target="_blank"><div class="box">
+			<h4>Safety of cycling routes in Ticino</h4>
+		</div></a>
+	</div>
+
+	<div class="page">
+		<h2>Contact</h2>
+		<ul>
+			<p>You can find me at CEA-List Nano-Innov 861, otherwise you can send me an <a href="mailto:theo.saporiti@cea.fr">email</a>.</p>
+		</ul>
+	</div>
+
+	<p id="footer"><b>© Theo Saporiti</b></p>
+</div>
 </body>
 </html>

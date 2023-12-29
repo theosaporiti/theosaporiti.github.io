@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width">
+
+<style>
+body{
+	margin: 0px;
+	font-size: 18px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: rgb(32, 32, 32);
+	overflow: hidden;
+	background-color: rgb(221, 221, 221);
+}
+
+#map{
+	display: block;
+	width: 100%;
+	height: 100vh;
+	border: none;
+}
+
+#infos{
+	display: block;
+	background: white;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	height: 100vh;
+	width: 40%;
+	max-width: 605px;
+	overflow: auto;
+}
+
+.contentbox{
+	padding: 20px 30px;
+}
+
+.gray{
+	background-color: rgb(244, 244, 244);
+}
+
+.line{
+	display: inline-block;
+	width: 30px;
+	height: 8px;
+	margin-right: 20px;
+}
+
+h1{
+	margin: 0px 0px 20px 0px;
+}
+
+h3{
+	margin: 0px 0px 10px 0px;
+}
+
+h4{
+	margin: 0px;
+}
+
+h4:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.contentbox > h4:last-of-type{
+	margin: 0px 0px 10px 0px;
+}
+
+h5{
+	margin: 30px 0px 10px 0px;
+}
+
+p{
+	margin: 0px 0px 6px 0px;
+}
+
+ul{
+	margin: 0px 0px 10px 0px;
+	list-style-type: square;
+}
+
+#footer{
+	margin: 12px;
+	text-align: right;
+	font-size: 14px;
+}
+</style>
+
+<title>Safety of cycling routes in Ticino</title>
+</head>
+<body>
+<div id="infos">
+	<!--EN-->
+	<div class="language" lang="en">
+		<div class="contentbox">
+			<h1>Safety of cycling routes in Ticino</h1>
+			<h4 class="selectlang" lang="it">Sicurezza dei percorsi ciclabili in Ticino</h4>
+			<h4 class="selectlang" lang="de">Sicherheit der Radwege im Tessin</h4>
+			<h4 class="selectlang" lang="fr">Sécurité des pistes cyclables au Tessin</h4>
+		</div>
+
+		<div class="contentbox gray">
+			<h3>Description</h3>
+			<p>This map shows all the cycling routes, listed by their degree of perceived danger, I was able to ride between the years 2014 and 2023 in Ticino. The map is therefore a useful tool for planifying trips and for discovering new routes.</p>
+		</div>
+
+		<div class="contentbox">
+			<h3>Legend</h3>
+
+			<h5><div class="line" style="background-color: green;"></div>Absolute safety, low risk</h5>
+			<p>Total or almost total absence of traffic.</p>
+			<p>Cycle paths, cycle paths shared with pedestrians, bus lanes, residential roads, agricultural roads.</p>
+
+			<h5><div class="line" style="background-color: orange;"></div>Caution, moderate risk</h5>
+			<p>Slow and intense, or fast but sporadic traffic.</p>
+			<p>30 km/h zones, 50 km/h roads which have cycling lanes or are wide enough for overtakes.</p>
+
+			<h5><div class="line" style="background-color: red;"></div>Extreme caution, high risk</h5>
+			<p>Fast, intense or sporadic traffic, few opportunities to overtake.</p>
+			<p>50 km/h roads which are narrow or with reduced visibility, without cycling lanes or with small ones.</p>
+			</p>
+
+			<h5><div class="line" style="background-color: black;"></div>Forbidden, real danger</h5>
+			<p>Extremely fast and intense traffic.</p>
+			<p>80 km/h roads, with or without cycling lanes.</p>
+			<p>Alternatives:</p>
+			<ul>
+				<li><b>Paradiso-Melide</b>: via Morcote or the TILO train</li>
+				<li><b>Ceneri vecchio</b>: via Quartino or the TILO train</li>
+				<li><b>Someo-Riveo</b>: elevated trail on the right of the road</li>
+			</ul>
+		</div>
+
+		<div class="contentbox gray">
+			<h3>Practical advices</h3>
+			<ul>
+				<li>In every situation, always assume the worst-case scenario.</li>
+				<li>At every change of direction, check behind you and signal with your hand.</li>
+				<li>Rights of way are never guaranteed.</li>
+				<li>Overtake cars only if they aren't moving or if they are moving slowly, always on the right. If the available gap is too small, stay in the queue.</li>
+				<li>Get out of blind spots. Beware of heavy vehicles.</li>
+				<li>Stay in the middle of roundabouts, lanes and narrow streets.</li>
+				<li>There's no right of way on zebra crossings.</li>
+				<li>On cycle paths shared with pedestrians, slow down for them.</li>
+				<li>Children can't correctly assess dangers.</li>
+				<li>In Ticino, no signs authorizing right turns on red lights have been installed yet.</li>
+				<li>Sometimes sidewalks are safer than cycling lanes.</li>
+				<li>Sometimes the risk of getting fined is preferable to the risk of getting killed.</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--IT-->
+	<div class="language" lang="it">
+		<div class="contentbox">
+			<h1>Sicurezza dei percorsi ciclabili in Ticino</h1>
+			<h4 class="selectlang" lang="en">Safety of cycling routes in Ticino</h4>
+			<h4 class="selectlang" lang="de">Sicherheit der Radwege im Tessin</h4>
+			<h4 class="selectlang" lang="fr">Sécurité des pistes cyclables au Tessin</h4>
+		</div>
+
+		<div class="contentbox gray">
+			<h3>Descrizione</h3>
+			<p>In questa mappa sono recensiti, per grado di sicurezza percepita, tutti i percorsi ciclabili che ho avuto modo di percorrere in Ticino tra il 2014 e il 2023. Si tratta dunque di uno strumento utile per la pianificazione di tragitti e per la scoperta di nuove rotte.</p>
+		</div>
+
+		<div class="contentbox">
+			<h3>Legenda</h3>
+
+			<h5><div class="line" style="background-color: green;"></div>Totale sicurezza, rischio basso</h5>
+			<p>Assenza totale o quasi di traffico.</p>
+			<p>Piste ciclabili, piste ciclopedonali, corsie del bus, strade residenziali, strade agricole.</p>
+
+			<h5><div class="line" style="background-color: orange;"></div>Prudenza, rischio medio</h5>
+			<p>Traffico lento ed intenso, oppure veloce ma sporadico.</p>
+			<p>Zone a 30 km/h, strade a 50 km/h munite di corsie ciclabili o di elevata larghezza facilitante il sorpasso.</p>
+
+			<h5><div class="line" style="background-color: red;"></div>Estrema prudenza, rischio elevato</h5>
+			<p>Traffico veloce, intenso o sporadico, poche possibilità di sorpasso.</p>
+			<p>Strade a 50 km/h di esigua larghezza o visibilità, prive di corsie ciclabili o di dimensioni ridotte.</p>
+			</p>
+
+			<h5><div class="line" style="background-color: black;"></div>Divieto d'accesso, pericolo concreto</h5>
+			<p>Traffico estremamente veloce ed intenso.</p>
+			<p>Strade a 80 km/h, munite o meno di corsie ciclabili.</p>
+			<p>Alternative:</p>
+			<ul>
+				<li><b>Paradiso-Melide</b>: via Morcote o collegamento TILO</li>
+				<li><b>Ceneri vecchio</b>: via Quartino o collegamento TILO</li>
+				<li><b>Someo-Riveo</b>: sentiero rialzato a destra della strada</li>
+			</ul>
+		</div>
+
+		<div class="contentbox gray">
+			<h3>Consigli pratici</h3>
+			<ul>
+				<li>In ogni situazione, presumere sempre il caso peggiore.</li>
+				<li>Ad ogni cambio di direzione, controllare dietro di sé e segnalare con la mano.</li>
+				<li>Le precedenze non sono mai garantite.</li>
+				<li>Superare le auto solo se sono ferme o lente, sempre sulla destra. Se non vi è spazio a sufficienza non superare.</li>
+				<li>Non rimanere negli angoli morti. Diffidare i mezzi pesanti.</li>
+				<li>In rotonda, in preselezione e su carreggiate strette, posizionarsi al centro della corsia.</li>
+				<li>Non vi è priorità sulle strisce pedonali.</li>
+				<li>Nelle piste ciclopedonali, rallentare per i pedoni.</li>
+				<li>I bambini non hanno una corretta percezione del pericolo.</li>
+				<li>In Ticino non vi è ancora nessun cartello autorizzante la svolta a destra a semaforo rosso.</li>
+				<li>A volte i marciapiedi sono più sicuri delle corsie ciclabili.</li>
+				<li>A volte il rischio di una multa è preferibile al rischio di perdere la vita.</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--DE-->
+	<div class="language" lang="de">
+		<div class="contentbox">
+			<h1>Sicherheit der Radwege im Tessin</h1>
+			<h4 class="selectlang" lang="en">Safety of cycling routes in Ticino</h4>
+			<h4 class="selectlang" lang="it">Sicurezza dei percorsi ciclabili in Ticino</h4>
+			<h4 class="selectlang" lang="fr">Sécurité des pistes cyclables au Tessin</h4>
+		</div>
+
+		<div class="contentbox gray">
+			<h3>Beschreibung</h3>
+			<p>Diese Karte gibt einen Überblick über alle Radwege, die ich zwischen 2014 und 2023 im Tessin gefahren habe, nach dem Sicherheitsgefühl. Es ist eine nüthzliche Hilfsmittel für die Routeplanung und die Endeckung der neuer Route.</p>
+		</div>
+
+		<div class="contentbox">
+			<h3>Legende</h3>
+
+			<h5><div class="line" style="background-color: green;"></div>Volle Sicherheit, geringes Risiko</h5>
+			<p>Völlige oder fast völlige Abwesenheit von Verkehr.</p>
+			<p>Radwege, Fuss- und Radwege, Busspuren, Wohnstrassen, landwirtschaftlichen Wege.</p>
+
+			<h5><div class="line" style="background-color: orange;"></div>Vorsicht, mittleres Risiko</h5>
+			<p>Langsamer und stark Verkehr, oder schneller aber sporadischer Verkehr.</p>
+			<p>Zonen mit 30 km/h, 50 km/h-Strassen mit Radwege oder hohe Breitein, die das Überholen erleichtern.</p>
+
+			<h5><div class="line" style="background-color: red;"></div>Extreme Vorsicht, hohes Risiko</h5>
+			<p>Schneller, stark oder sporadischer Verkehr, wenig Überholmöglichkeiten.</p>
+			<p>Strassen mit 50 km/h mit schlechter Breite oder Sicht, keine oder kleine Radwege.</p>
+			</p>
+
+			<h5><div class="line" style="background-color: black;"></div>Zugangsverbot, reale Gefahr</h5>
+			<p>Extreme schneller und intensiver Verkehr.</p>
+			<p>Strassen mit 80 km/h, mit oder ohne Radwege.</p>
+			<p>Alternativen:</p>
+			<ul>
+				<li><b>Paradiso-Melide</b>: nach Morcote oder Zugverbindung (TILO)</li>
+				<li><b>Ceneri vecchio</b>: nach Quartino oder Zugverbindung (TILO)</li>
+				<li><b>Someo-Riveo</b>: Höhenweg rechts der Strasse</li>
+			</ul>
+		</div>
+
+		<div class="contentbox gray">
+			<h3>Praktische Hinweise</h3>
+			<ul>
+				<li>Gehen Sie in jeder Situation immer vom schlimmsten Fall aus.</li>
+				<li>Schauen Sie bei jedem Richtungwechsel hinter und geben Sie ein Handzeichnen.</li>
+				<li>Der Vorrang ist nie garantiert.</li>
+				<li>Überholen Sie nun stehende oder langsame Fahrzeuge, und zwar immer von rechts. Wenn nicht genug Platz ist, überholen SIe nicht.</li>
+				<li>Halten Sie sich nicht in toten Winkel auf. Seien Sie vorsichtig mit schweren Fahrzeugen.</li>
+				<li>In Kreisverkehren, bei Vorrangschaltung und auf schmalen Fahrbahnen, in der mitte der Fahrspur stehen.</li>
+				<li>Kein Vorrang an Fussgängerüberweg.</li>
+				<li>Auf Ragwege für Fussgänger, langsamer fahren.</li>
+				<li>Kinder haben kein richtiges Gefahrenempfinden.</li>
+				<li>Im Tessin gibt es immer noch keine Schilder, die das Rechtsabbiegen an roten Ampeln erlauben.</li>
+				<li>Manchmal sind Trottoir sicherer als Radwege.</li>
+				<li>Manchmal ist das Risiko einer Geldstrafe höher als das Risiko, das eigene Leben zu verlieren.</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--FR-->
+	<div class="language" lang="fr">
+		<div class="contentbox">
+			<h1>Sécurité des pistes cyclables au Tessin</h1>
+			<h4 class="selectlang" lang="en">Safety of cycling routes in Ticino</h4>
+			<h4 class="selectlang" lang="it">Sicurezza dei percorsi ciclabili in Ticino</h4>
+			<h4 class="selectlang" lang="de">Sicherheit der Radwege im Tessin</h4>
+		</div>
+
+		<div class="contentbox gray">
+			<h3>Description</h3>
+			<p>Cette carte recense, par degré de sécurité perçue, tous les parcours cyclables que j'ai eu l'occasion de parcourir au Tessin de 2014 à 2023. Il s'agit donc d'un outil utile pour la planification de nouveau trajets et pour la découverte de nouvelles routes.</p>
+		</div>
+
+		<div class="contentbox">
+			<h3>Légende</h3>
+
+			<h5><div class="line" style="background-color: green;"></div>Sécurité totale, risque bas</h5>
+			<p>Absence totale ou presque de trafic.</p>
+			<p>Pistes cyclables, pistes partagées, voies de bus, routes résidentielles, routes agricoles.</p>
+
+			<h5><div class="line" style="background-color: orange;"></div>Prudence, risque modéré</h5>
+			<p>Traffic lent et intense, ou rapide mais sporadique.</p>
+			<p>Zones à 30 km/h, routes à 50 km/h munies de bandes cyclables ou d'une grande largeur facilitant le dépassement.</p>
+
+			<h5><div class="line" style="background-color: red;"></div>Extrême prudence, risque élevé</h5>
+			<p>Traffic rapide, intense ou sporadique, peu de possibilités de dépassement.</p>
+			<p>Routes à 50 km/h trop étroites ou sans une suffisante visibilité, démunies de bandes cyclables ou de dimensions réduites.</p>
+			</p>
+
+			<h5><div class="line" style="background-color: black;"></div>Défense d'accès, danger concret</h5>
+			<p>Traffic extrêmement rapide et intense.</p>
+			<p>Routes à 80 km/h, munies ou pas de bandes cyclables.</p>
+			<p>Alternatives:</p>
+			<ul>
+				<li><b>Paradiso-Melide</b>: par Morcote ou connexion TILO</li>
+				<li><b>Ceneri vecchio</b>: par Quartino ou connexion TILO</li>
+				<li><b>Someo-Riveo</b>: chemin surélevé sur la droite de la route</li>
+			</ul>
+		</div>
+
+		<div class="contentbox gray">
+			<h3>Conseils pratiques</h3>
+			<ul>
+				<li>Pour chaque situation, s'attendre toujours au pire.</li>
+				<li>À chaque changement de direction, contrôler derrière soi et signaler avec la main.</li>
+				<li>Les priorités ne sont jamais garanties.</li>
+				<li>Dépasser les véhicules seulement lorsqu'ils sont immobiles ou lents, toujours par la droite. Ne pas dépasser s'il n'y a pas assez d'espace.</li>
+				<li>Éviter de rester dans les angles morts. Se méfier des poids lourds.</li>
+				<li>Dans les ronds-points, en présélection et dans les chaussées étroites, se positionner au milieu de la voie.</li>
+				<li>Il n'y a pas de priorité sur les passages piétons.</li>
+				<li>Sur les pistes partagées avec les piétons, ralentir pour eux.</li>
+				<li>Les enfants n'ont pas une perception adéquate du danger.</li>
+				<li>Au Tessin il n'y a pas encore de panneaux autorisant d'obliquer à droite au feu rouge.</li>
+				<li>Parfois les trottoirs sont plus sûrs que les bandes cyclables.</li>
+				<li>Parfois le risque d'une amende est préférable à celui de perdre sa vie.</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer"><p>© 2023 Theo Saporiti, Dario Bassi</p></div>
+</div>
+
+<script>
+	//We start after the first element
+	for(var i = 1; i < document.getElementsByClassName("language").length; i++){
+		document.getElementsByClassName("language")[i].style.display = "none";
+	}
+
+	//We start at the first element
+	for(var i = 0; i < document.getElementsByClassName("selectlang").length; i++){
+		document.getElementsByClassName("selectlang")[i].addEventListener("click", function(){
+			for(var j = 0; j < document.getElementsByClassName("language").length; j++){
+				if(document.getElementsByClassName("language")[j].getAttribute("lang") == this.getAttribute("lang")){
+					document.getElementsByClassName("language")[j].style.display = "block";
+				}else{
+					document.getElementsByClassName("language")[j].style.display = "none";
+				}
+			}
+		});
+	}
+</script>
+
+<iframe id="map" allowfullscreen allow="geolocation" src="https://umap.openstreetmap.fr/en/map/safety-of-cycling-routes-in-ticino_951185?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false&captionMenus=true"></iframe>
+
+</body>
+</html>
